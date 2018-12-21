@@ -24,3 +24,6 @@ yarn run test
 ```
 yarn run lint
 ```
+
+### 组件说明
+1. Table 组件只适合大屏

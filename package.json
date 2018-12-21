@@ -1,13 +1,27 @@
 {
   "name": "jm-ivista-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "lib/ivista-ui.umd.min.js",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxmi/jm-ivista-ui.git"
+  },
+  "homepage": "https://github.com/xxmi/jm-ivista-ui.git#readme",
+  "author": "xxmi",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name ivista-ui --dest lib packages/index.js"
   },
   "dependencies": {
+    "element-ui": "^2.4.11",
+    "throttle-debounce": "^2.0.1",
     "vue": "^2.5.17"
   },
   "devDependencies": {
@@ -17,6 +31,8 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.17"
   }
 }
