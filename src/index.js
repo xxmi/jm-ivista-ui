@@ -1,10 +1,20 @@
-import Table from '../packages/table';
-import TableColumn from '../packages/table-column';
+import BSLayout from '../packages/big-screen/layout';
+import BSModuleLayout from '../packages/big-screen/module-layout';
+import BSIndexHeader from '../packages/big-screen/index-header';
+import BSLabelTitle from '../packages/big-screen/label-title';
+import BSSearchInput from '../packages/big-screen/search-input';
+import BSTable from '../packages/big-screen/table';
+import BSTableColumn from '../packages/big-screen/table-column';
 
 // 组件
 const components = {
-  Table,
-  TableColumn
+  BSLayout,
+  BSModuleLayout,
+  BSIndexHeader,
+  BSLabelTitle,
+  BSSearchInput,
+  BSTable,
+  BSTableColumn
 };
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册

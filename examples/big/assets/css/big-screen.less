@@ -1,0 +1,48 @@
+@import "./big-screen-global.less";
+
+
+.up-container,
+.down-container {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.up-container {
+  flex: 1;
+  flex-direction: row;
+  padding: 0 0 .1rem 0;
+
+  .uc-left-container,
+  .uc-middle-container,
+  .uc-right-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .uc-left-container {
+    flex: 0 0 4.5rem;
+  }
+
+  .uc-middle-container {
+    flex: 1;
+    margin: 0 .1rem;
+
+    .custom-logo {
+      background: url("../images/big_logo.png") center center no-repeat !important;
+      background-size: 5.37rem .6rem;
+    }
+  }
+
+  .uc-right-container {
+    display: flex;
+    flex: 0 0 4.5rem;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+}
+
+.down-container {
+  flex: 0 0 2.36rem;
+  flex-direction: row;
+}

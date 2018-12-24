@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import {Tooltip} from 'element-ui';
-import IvistaUi from '../src';
+import IvistaUi from '../../src';
 
 Vue.use(Tooltip);
 Vue.use(IvistaUi);

@@ -1,4 +1,4 @@
-import {getValueByPath} from '../../../src/utils/el-util.js';
+import {getValueByPath} from '../../../../src/utils/el-util.js';
 
 export const getCell = function (event) {
   let cell = event.target;

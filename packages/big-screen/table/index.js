@@ -1,5 +1,5 @@
 // 导入组件
-import Table from './src/cn-xxmi-table.vue';
+import Table from './src/table.vue';
 
 // 为组件提供 install 安装方法，供按需映入
 Table.install = function (Vue) {

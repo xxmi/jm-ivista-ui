@@ -1,7 +1,7 @@
-import {getPropByPath} from '../../../src/utils/el-util.js';
+import {getPropByPath} from '../../../../src/utils/el-util.js';
 
 export default {
-  name: 'CnXxmiTableColumn',
+  name: 'bs-table-column',
   props: {
     label: String,
     flex: {

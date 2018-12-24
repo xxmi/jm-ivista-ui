@@ -1,8 +1,8 @@
-import {getStyle, hasClass} from '../../../src/utils/el-dom';
+import {getStyle, hasClass} from '../../../../src/utils/el-dom';
 import {debounce} from 'throttle-debounce';
 
 export default {
-  name: 'CnXxmiTableBody',
+  name: 'bs-table-body',
   props: {
     store: {
       required: true

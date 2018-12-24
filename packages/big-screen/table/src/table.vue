@@ -5,22 +5,23 @@
         </div>
         <div class="cx-table-header" :class="store.overflowY ? 'overflowY':''">
             <div class="header-th"
-                 v-for="column in columns"
+                 v-for="(column,index) in columns"
+                 :key="'th'+index"
                  :style="{'flex': column.flex}">
                 <div class="cell" :style="{width: column.width}">{{column.label}}</div>
             </div>
         </div>
-        <CnXxmiTableBody :class="store.overflowY ? 'overflowY':''" :store="store"></CnXxmiTableBody>
+        <TableBody :class="store.overflowY ? 'overflowY':''" :store="store"></TableBody>
     </div>
 </template>
 
 <script>
-  import CnXxmiTableBody from './cn-xxmi-table-body.js';
+  import TableBody from './table-body.js';
 
   export default {
-    name: 'CnXxmiTable',
+    name: 'bs-table',
     components: {
-      CnXxmiTableBody
+      TableBody
     },
     props: {
       data: {
@@ -55,7 +56,7 @@
     watch: {
       data: {
         immediate: true,
-        handler (value) {
+        handler () {
           this.store.data = [];
           this.store.data = this.data;
         }
@@ -82,7 +83,7 @@
   };
 </script>
 <style lang="less">
-    @import "../../../src/assets/css/global.less";
+    @import "../../../../src/assets/css/global.less";
 
     .cn-xxmi-table {
         display: flex;
@@ -118,6 +119,7 @@
                 font-size: .14rem;
                 align-items: center;
                 box-sizing: border-box;
+
                 > div.cell {
                     .th-td-padding;
                     box-sizing: border-box;
@@ -177,6 +179,7 @@
                         background-color: #192e5e;
                         color: #cce3ff;
                         font-size: .14rem;
+
                         > div.cell {
                             .th-td-padding;
                             box-sizing: border-box;
@@ -188,6 +191,7 @@
                     &:hover {
                         border-color: #00a0e9;
                         cursor: pointer;
+
                         > div.column {
                             background-color: #1e3f87;
                         }
